@@ -1,0 +1,16 @@
+en:
+  RBAC:                 "Role Based Access Control"
+  Access_Role:          "Access Role"
+  Access_Roles:         "Access Roles"
+  Access_Assignments:   "Access Assignment"
+  Access_Assignments:   "Access Assignments"
+  Access_Permission:    "Access Permission"
+  Access_Permissions:   "Access Permissions"
+  Access_Operation:     "Access Operation"
+  Access_Operations:    "Access Operations"
+  ID:                   "ID"
+  XID:                  "XID"
+  Name:                 "Name"
+  User:		        "User"
+
+

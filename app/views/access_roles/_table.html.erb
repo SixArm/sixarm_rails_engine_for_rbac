@@ -1,0 +1,24 @@
+<%
+  access_roles||=@access_roles
+%>
+<div class="views access_roles table">
+  <table class="data sortable">
+    <thead>
+      <tr>
+        <th><%=t('ID')%></th>
+        <th><%=t('XID')%></th>
+        <th><%=t('Name')%></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% access_roles.each do |x| %>
+        <tr>
+          <td><%=x.id%></td>
+          <td><%=x.xid%></td>
+          <td><%=x.name%></td>
+        </tr>
+      <%  end %>
+    </tbody>
+    <tfoot></tfoot>
+  </table>
+</div>

@@ -1,0 +1,24 @@
+<%
+  access_permissions||=@access_permissions
+%>
+<div class="views access_permissions table">
+  <table class="data sortable">
+    <thead>
+      <tr>
+        <th><%=t('ID')%></th>
+        <th><%=t('Access_Role')%></th>
+        <th><%=t('Access_Operation')%></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% access_permissions.each do |x| %>
+        <tr>
+          <td><%=x.id %></td>
+          <td><%=x.access_role ? x.access_role.name : '' %></td>
+          <td><%=x.access_operation ? x.access_operation.name : '' %></td>
+        </tr>
+      <%  end %>
+    </tbody>
+    <tfoot></tfoot>
+  </table>
+</div>

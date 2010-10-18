@@ -1,0 +1,27 @@
+<%
+ access_roles||=@access_roles
+ users||=@users
+%>
+<div class="views access_assignments grid">
+  <table class="data">
+    <thead>
+      <tr>
+	<th></th>
+	<% access_roles.each do |access_role| %>
+        <th><%=access_role.xid.split(//).join("<br>")%></th>
+	<% end %>
+      </tr>
+    </thead>
+    <tbody>
+      <% users.each do |user| -%>
+        <tr>
+          <th><%=h user.username -%></th>
+	  <% access_roles.each do |access_role| -%>
+          <td><%=check_box_tag("check[#{user.id}][#{access_role.id}]", 1) -%></td>
+	  <% end -%>
+        </tr>
+      <%  end %>
+    </tbody>
+    <tfoot></tfoot>
+  </table>
+</div>

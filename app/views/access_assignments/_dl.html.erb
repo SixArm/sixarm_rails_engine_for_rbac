@@ -1,0 +1,10 @@
+<%
+  access_assignment||=@access_assignment
+%>
+<div class="views access_assignments dl">
+  <dl>
+    <dt><%=t('ID')%></dt><dd><%=h access_assignment.id %></dd>
+    <dt><%=t('User')%></dt><dd><%=h access_assignment.user ? access_assignment.user.name : '' %></dd>
+    <dt><%=t('Access_Role')%></dt><dd><%=h access_assignment.access_role ? access_assignment.access_role.name : '' %></dd>
+  </dl>
+</div>

@@ -1,0 +1,35 @@
+<%
+  access_assignments||=@access_assignments
+  show_edit||=@show_edit
+  show_delete||=@show_delete
+%>
+<div class="views access_assignments table">
+  <table class="data sortable">
+    <thead>
+      <tr>
+	<% if show_edit or show_delete %>
+	<th></th>
+	<% end %>
+        <th><%=t('ID')%></th>
+        <th><%=t('User')%></th>
+        <th><%=t('Access_Role')%></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for x in access_assignments %>
+        <tr>
+	  <% if show_edit or show_delete %>
+	  <td>
+	    <% if show_edit %><%= link_to(t('Edit'),edit_access_assignment_path(x)) %><% end %>
+	    <% if show_delete %><%= link_to(t('Delete'),destroy_access_assignment_path(x)) %><% end %>
+	  </td>
+	  <% end %>
+          <td><%=x.id %></td>
+          <td><%= x.user ? x.user.username : '' %></td>
+          <td><%= x.access_role ? x.access_role.name : '' %></td>
+        </tr>
+      <%  end %>
+    </tbody>
+    <tfoot></tfoot>
+  </table>
+</div>

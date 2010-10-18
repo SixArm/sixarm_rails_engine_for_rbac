@@ -1,0 +1,10 @@
+<%
+  access_permission||=@access_permission
+%>
+<div class="views access_permissions dl">
+  <dl>
+    <dt><%=t('ID')%></dt><dd><%=h access_permission.id %></dd>
+    <dt><%=t('Access_Role')%></dt><dd><%=h access_permission.access_role ? access_permission.access_role.name : '' %></dd>
+    <dt><%=t('Access_Operation')%></dt><dd><%=h access_permission.access_operation ? access_permission.acccess_operation.name : '' %></dd>
+  </dl>
+</div>

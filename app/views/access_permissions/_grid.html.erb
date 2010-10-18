@@ -1,0 +1,27 @@
+<%
+ access_roles||=@access_roles
+ access_operations||=@access_operations
+%>
+<div class="views access_permissions gri">
+  <table class="data">
+    <thead>
+      <tr>
+	<th></th>
+	<% access_roles.each do |access_role| %>
+        <th><%=access_role.xid.split(//).join("<br>")%></th>
+	<% end %>
+      </tr>
+    </thead>
+    <tbody>
+      <% access_operations.each do |access_operation| %>
+        <tr>
+          <th><%= access_operation.xid %></th>
+	  <% access_roles.each do |access_role| %>
+          <td><input type=checkbox name="" value=""></td>
+	  <% end %>
+        </tr>
+      <%  end %>
+    </tbody>
+    <tfoot></tfoot>
+  </table>
+</div>

@@ -1,0 +1,61 @@
+SixArm Ruby On Rails Engine For Role Based Access Control
+=========================================================
+
+=== Users
+
+Users are typical. You define these in your own app, however you want.
+
+
+=== Roles
+
+Roles are typical. 
+
+Examples:
+* admin
+* guest
+* subscriber
+* auditor
+
+Access Roles have three fields:
+* name: a user-friendly name that can use any characters you want, e.g. "Application Administrator Role"
+* description: a user-friendly freeform memo that you want, e.g. "This role has the highest security."
+* xid: external id, e.g. admin, guest, subscriber, etc. The xid is all lowercase and underscores, suitable for using as a Ruby symbol and/or CSV column keyword and/or XML id.
+
+
+=== Operations
+
+Operations keep track of all the use case things that your app can do. 
+This is usually easy to describe using a verb-noun combination.
+
+Examples:
+* read message
+* edit note
+* play song
+* run report
+* download file
+
+
+=== Assignments
+
+Assignments connect users and roles.
+
+Users <-- Assignments -->  Roles 
+
+In some Ruby applications, the "assigments" table would be akin to a "role_users" table.
+
+
+=== Permissions
+
+Permissions connect roles and operations.
+
+Roles <-- Permissions --> Operations
+
+In some Ruby applications, the "permissions" table would be akin to a "privileges" table.
+
+
+=== Footer
+
+
+Copyright (c) 2009 Joel Parker Henderson
+Released under the MIT license
+
